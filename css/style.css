@@ -295,7 +295,13 @@ h2.produtos-mineiro::before{
 .locais-item {
     clear: both;
     margin: 60px auto;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.locais-item::after, .locais-item::before {
+    display: table;
+    content: '';
+    clear: both;
 }
 
 .locais-item img{
@@ -330,6 +336,27 @@ h2.produtos-mineiro::before{
     border: 3px solid;
     color: #252525;
     padding: 10px 20px;
+}
+
+@media only screen and (min-width: 740px) and (max-width:980px) {
+    .locais{
+        max-width: 720px;
+    }
+
+    .locais-item > div {
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 739px){
+    .locais{
+        max-width: 300px;
+    }
+
+    .locais-item > div, .locais-item img{
+        width: 300px;
+        margin: 0;
+    }
 }
 
 .assine{
@@ -396,6 +423,33 @@ h2.produtos-mineiro::before{
     cursor: pointer;
 }
 
+@media only screen and (min-width: 740px) and (max-width:980px) {
+    .assine-container {
+        max-width: 720px;
+    }
+
+    .assine-info, .assine form{
+        width: 340px;
+    }
+
+}
+
+@media only screen and (max-width: 739px){
+    .assine-container {
+        max-width: 300px;
+    }
+
+    .assine-info, .assine form{
+        width: 300px;
+        margin: 10px 0 ;
+        
+    }
+
+    .assine {
+        text-align: center;
+    }
+}
+
 .footer{
     background: #d6d3c8;
     padding: 40px 0;
@@ -424,4 +478,17 @@ h2.produtos-mineiro::before{
     float: right;
     margin: 0 10px; 
     display: block;
+}
+
+@media only screen and (max-width: 739px){
+    .footer-container {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .footer img {
+        display: inline;
+        float: none;
+        margin-top: 15px;
+    }
 }
